@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const port = 3000
-// const path = require('path')
+const fs = require('fs')
 
 var bodyParser = require('body-parser')
 
@@ -20,6 +20,11 @@ app.listen(port, () => {
 
 app.post('/visited', function (req, res) {
     console.log("The targeted victim visited the website!")
+    const d = new Date();
+    var logcontent = "The targeted victim visited on : " + d + "\n"
+    fs.appendFile('victimlog.txt', logcontent, function (err) {
+        if (err) return console.log(err);
+    });
     return res.end('done')
 })
 
