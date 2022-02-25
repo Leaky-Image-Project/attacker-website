@@ -1,2 +1,2 @@
 # attacker-website
-To start, run node app.js
+To start, run the command line : node app.js
