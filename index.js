@@ -5,10 +5,10 @@ img.onload = function () {
     xhr.open('POST', '/visited', true)
     xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8')
     xhr.send(null)
-    img.onerror = function () {
-        var xhr2 = new window.XMLHttpRequest()
-        xhr2.open('POST', '/notvisited', true)
-        xhr2.setRequestHeader('Content-Type', 'application/json;charset=UTF-8')
-        xhr2.send(null)
-    }
+}
+img.onerror = function () {
+    var xhr2 = new window.XMLHttpRequest()
+    xhr2.open('POST', '/notvisited', true)
+    xhr2.setRequestHeader('Content-Type', 'application/json;charset=UTF-8')
+    xhr2.send(null)
 }
