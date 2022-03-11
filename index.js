@@ -1,5 +1,5 @@
 var img = document.getElementById("cat-image");
-img.src = "https://www.linkpicture.com/q/catphoto.jpeg"; //link to image that requires authentication to open
+img.src = "http://localhost:3030/image/29e963efdbe2ddd7dfa18d15da49af6f"; //link to image that requires authentication to open
 img.onload = function () {
     var xhr = new window.XMLHttpRequest()
     xhr.open('POST', '/visited', true)
